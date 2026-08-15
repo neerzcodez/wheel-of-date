@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Little Question 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts" aria-hidden="true">
+    <span>♡</span><span>♡</span><span>✦</span><span>♡</span><span>✧</span>
+    <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+  </div>
+
+  <main class="card">
+    
+    <h1>Would you go on a<br><em>date</em> with me?</h1>
+    <p class="sub">I have prepared an extremely unbiased decision-making system.</p>
+
+    <section class="wheel-area" aria-label="Decision wheel">
+      <div class="wheel-wrap">
+        <div class="wheel">
+          <div class="yes-label">YES</div>
+          <div class="no-label">NO</div>
+        </div>
+
+        <!-- The trick: this pointer starts at YES, spins from its own pivot,
+             and always comes back to 0deg / YES. -->
+        <div class="pointer" id="pointer" aria-hidden="true">
+          <div class="pointer-line"></div>
+          <div class="pointer-tip">♥</div>
+          <div class="pivot"></div>
+        </div>
+
+        <div class="top-sparkle">✦</div>
+      </div>
+    </section>
+
+    <button id="spinBtn">Spin the wheel <span>♡</span></button>
+    
+
+    <section class="result" id="result" hidden>
+      <div class="confetti">✦ ♡ ✦</div>
+      <p>the universe has spoken.</p>
+      <h2>It’s a date. 💗</h2>
+      <button class="again" id="againBtn">spin again (for science)</button>
+    </section>
+  </main>
+
+  <footer>made with suspiciously good intentions</footer>
+  <script src="script.js"></script>
+</body>
+</html>
